@@ -18,39 +18,55 @@ router.post('/register', async (req, res) => {
         password: hashPassword,
       });
       const savedUser = await newUser.save();
-      res
-        .status(201)
-        .json({ data: savedUser, message: 'Registration Successful' });
+      res.json({
+        status: 'ok',
+        data: savedUser,
+        message: 'Registration Successful',
+      });
     }
     if (isEmail) {
-      res.status(409).json({ data: null, message: 'Email already registered' });
+      res.json({
+        status: 'fail',
+        data: null,
+        message: 'Email already registered',
+      });
     } else if (isUsername) {
-      res.status(409).json({ data: null, message: 'Username already taken' });
+      res.json({
+        status: 'fail',
+        data: null,
+        message: 'Username already taken',
+      });
     } else if (isPhone) {
-      res
-        .status(409)
-        .json({ data: null, message: 'Phone Number already taken' });
+      res.json({
+        status: 'fail',
+        data: null,
+        message: 'Phone Number already taken',
+      });
     }
   } catch (error) {
-    res.status(400).json({ message: error });
+    res.json({ status: 'fail', data: null, message: error });
   }
 });
 
 router.post('/login', async (req, res) => {
   try {
-    const user = await User.findOne({ username: req.body.username });
+    const user = await User.findOne({ email: req.body.email });
     if (!user) {
-      res.status(401).json({ data: null, message: 'User not found' });
+      res.json({ status: 'fail', data: null, message: 'User not found' });
     } else {
       const match = await bcrypt.compare(req.body.password, user.password);
       if (!match) {
-        res.status(403).json({ data: null, message: 'Password is incorrect' });
+        res.json({
+          status: 'fail',
+          data: null,
+          message: 'Password is incorrect',
+        });
       } else {
-        res.status(200).json({ data: user, message: 'Login Successful' });
+        res.json({ status: 'ok', data: user, message: 'Login Successful' });
       }
     }
   } catch (error) {
-    res.status(400).json({ message: error });
+    res.status(400).json({ status: 'fail', data: null, message: error });
   }
 });
 
