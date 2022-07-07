@@ -1,8 +1,8 @@
 .main-container {
-    width: 100vw;
-    height: 100vh;
+    height: 70vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .login-form {
@@ -32,7 +32,6 @@
     font-size: small;
 }
 
-.success-text {
-    color: green;
+.helper-text {
     font-size: small;
 }

@@ -1,8 +1,8 @@
 .main-container {
-    width: 100vw;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .register-form {
@@ -32,7 +32,7 @@
     font-size: small;
 }
 
-.success-text {
-    color:green;
+.helper-text {
+    margin-top: 10px;
     font-size: small;
 }
