@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Login Page</title>
+  </head>
+  <body>
+    <section class="main-container">
+      <form action="" class="login-form" id="loginform">
+        <h1>Welcome</h1>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <div class="error-text" id="emailerror"></div>
+        </div>
+
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+          <div class="error-text" id="passworderror"></div>
+        </div>
+        <div class="success-text" id="successtext"></div>
+        <div class="input-container">
+          <input type="button" value="Login" id="loginbutton" />
+        </div>
+        <div class="link-container">
+          <p>Don't have an account,</p>
+          <a href="../register/index.html" style="margin-left: 5px"
+            >Register Now</a
+          >
+        </div>
+      </form>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

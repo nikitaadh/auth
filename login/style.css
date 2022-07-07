@@ -1,0 +1,33 @@
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.link-container {
+    display: flex;
+    align-items: center;
+}
+
+.error-text {
+    color: red;
+    font-size: small;
+}
+
+.success-text {
+    color: green;
+    font-size: small;
+}

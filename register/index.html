@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Register</title>
+  </head>
+  <body>
+    <section class="main-container">
+      <form action="" class="register-form" id="registerform">
+        <h1>Create an account</h1>
+        <div class="input-container">
+          <label for="fullname">Full Name</label>
+          <input type="text" name="fullname" id="fullname" />
+          <div class="error-text" id="fullnameerror"></div>
+        </div>
+        <div class="input-container">
+          <label for="username">Username</label>
+          <input type="text" name="'username" id="username" />
+          <div class="error-text" id="usernameerror"></div>
+        </div>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" />
+          <div class="error-text" id="emailerror"></div>
+        </div>
+        <div class="input-container">
+          <label for="phone">Phone Number</label>
+          <input type="number" name="phone" id="phone" />
+          <div class="error-text" id="phoneerror"></div>
+        </div>
+        <div class="input-container">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" />
+          <div class="error-text" id="passworderror"></div>
+        </div>
+        <div class="input-container">
+          <label for="confirm-password">Confrim Password</label>
+          <input type="password" name="confirmpassword" id="confirmpassword" />
+        </div>
+        <div class="success-text" id="successtext"></div>
+        <div class="input-container">
+          <input type="button" value="Register" id="registerbutton" />
+        </div>
+        <div class="link-container">
+          <p>Already have an account,</p>
+          <a href="../login/index.html" style="margin-left: 5px">Login Now</a>
+        </div>
+      </form>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
