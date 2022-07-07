@@ -11,6 +11,10 @@
     width: 300px;
 }
 
+.header{
+    text-align: center;
+}
+
 .input-container {
     display: flex;
     flex-direction: column;
@@ -20,6 +24,7 @@
 .link-container {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .error-text {
