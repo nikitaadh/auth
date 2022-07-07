@@ -27,6 +27,8 @@ registerButton.addEventListener('click', (e) => {
     /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
   let phonePattern =
     /(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?/g;
+  let passwordPattern =
+    /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{6,16}$/;
 
   if (fullName.value === '') {
     errors.fullName = 'Full Name is required';
@@ -66,6 +68,9 @@ registerButton.addEventListener('click', (e) => {
     errors.password = 'Password is too short';
   } else if (password.value.length > 20) {
     errors.password = 'Password is too long';
+  } else if (!passwordPattern.test(password.value)) {
+    errors.password =
+      'Invalid, Password must contain at least one number and one special character';
   } else if (password.value !== confirmPassword.value) {
     errors.password = 'Password doesnot match';
   }
