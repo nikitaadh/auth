@@ -6,26 +6,26 @@
 
     <link rel="stylesheet" href="./style.css" />
 
-    <title>Login Page</title>
+    <title>Login</title>
   </head>
   <body>
     <section class="main-container">
       <form action="" class="login-form" id="loginform">
-        <h1 class="header">Welcome</h1>
+        <div class="header">Login</div>
         <div class="input-container">
-          <label for="email">Email</label>
-          <input type="email" name="email" id="email" />
+          <label for="email" class="input-label">Email</label>
+          <input type="email" name="email" id="email" class="input-field" />
           <div class="error-text" id="emailerror"></div>
         </div>
 
         <div class="input-container">
-          <label for="password">Password</label>
-          <input type="password" name="password" id="password" />
+          <label for="password" class="input-label">Password</label>
+          <input type="password" name="password" id="password" class="input-field" />
           <div class="error-text" id="passworderror"></div>
         </div>
         <div class="helper-text" id="helpertext"></div>
         <div class="input-container">
-          <input type="button" value="Login" id="loginbutton" />
+          <input type="button" value="Login" id="loginbutton" class="login-btn" />
         </div>
         <div class="link-container">
           <p>Don't have an account,</p>
