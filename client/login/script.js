@@ -16,7 +16,6 @@ loginButton.addEventListener('click', (e) => {
 
   let emailPattern =
     /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-  //   let passwordPattern = "^(?=.*[A-Za-z])(?=.*d)[A-Za-zd]{8,}$";
 
   if (email.value === '') {
     errors.email = 'Email is required';
@@ -30,8 +29,6 @@ loginButton.addEventListener('click', (e) => {
     errors.password = 'Password is too short';
   } else if (password.value.length > 20) {
     errors.password = 'Password is too long';
-    //   } else if (!passwordPattern.test(password.value)) {
-    //     errors.password = "Invalid Password";
   }
 
   if (Object.keys(errors).length > 0) {
@@ -73,6 +70,7 @@ const loginUser = async () => {
           helperText.style.color = 'green';
           email.value = '';
           password.value = '';
+          localStorage.setItem('userInfo', JSON.stringify(data.data));
           window.location.href =
             location.protocol + '//' + location.host + '/client/index.html';
         }
